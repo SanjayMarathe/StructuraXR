@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Upload Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        h2 { color: #666; margin-top: 0; }
+        .status { 
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏗️ CAD Upload Feature Test</h1>
+    
+    <div class="test-section">
+        <h2>✅ Installation Check</h2>
+        <div id="installCheck" class="status info">Checking installation...</div>
+    </div>
+
+    <div class="test-section">
+        <h2>📁 File Format Support</h2>
+        <p>The following file formats should be accepted:</p>
+        <ul>
+            <li><strong>GLTF</strong> (.gltf) - JSON format</li>
+            <li><strong>GLB</strong> (.glb) - Binary format (recommended)</li>
+            <li><strong>STL</strong> (.stl) - CAD format</li>
+            <li><strong>OBJ</strong> (.obj) - Wavefront format</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🧪 Quick Test</h2>
+        <p>To test the upload feature:</p>
+        <ol>
+            <li>Open <code>http://localhost:5174</code> in your browser</li>
+            <li>Look for the "Upload CAD Model" section in the UI</li>
+            <li>Click "Choose File" and select a test model</li>
+            <li>Check the browser console for upload logs</li>
+            <li>The model should appear in the scene at position (0, 1, -2)</li>
+        </ol>
+        <div class="status info">
+            💡 <strong>Tip:</strong> Download free test models from 
+            <a href="https://sketchfab.com/3d-models?features=downloadable" target="_blank">Sketchfab</a>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🎮 VR Testing</h2>
+        <p>To test in VR:</p>
+        <ol>
+            <li>Upload a model using the desktop interface</li>
+            <li>Put on your Meta Quest headset</li>
+            <li>Point your controller at the model</li>
+            <li>Pull the trigger to grab it</li>
+            <li>Move your hand - the model should follow</li>
+            <li>Release the trigger to drop it</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>📊 Expected Console Output</h2>
+        <p>When uploading a file named "test.glb", you should see:</p>
+        <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px; overflow-x: auto;">
+📤 Uploading model: test.glb
+📁 Loading file: test.glb Type: glb
+✅ Model loaded successfully: test.glb
+✅ Model uploaded and added to scene</pre>
+    </div>
+
+    <script>
+        // Check if required files exist
+        fetch('/src/ModelLoader.ts')
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('installCheck').className = 'status success';
+                    document.getElementById('installCheck').innerHTML = '✅ ModelLoader.ts found<br>✅ Installation complete<br>✅ Ready to test!';
+                } else {
+                    throw new Error('File not found');
+                }
+            })
+            .catch(() => {
+                document.getElementById('installCheck').className = 'status error';
+                document.getElementById('installCheck').innerHTML = '❌ ModelLoader.ts not found. Please check installation.';
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StructuraXR - AI Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/landing.css">
+    <script type="module" src="/src/landing.js"></script>
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <nav>
+        <div class="logo">StructuraXR</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#mathematics">Mathematics</a>
+            <a href="#about">About</a>
+            <a href="https://github.com/yourusername/vr-structural-playground" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <div class="badge">AI-POWERED ENGINEERING</div>
+                <h1>Build the Future in <span class="gradient-text">Extended Reality</span></h1>
+                <p>Design, test, and analyze engineering structures in an immersive WebXR environment. Powered by Claude AI for instant generation and structural analysis.</p>
+                
+                <div class="cta-group">
+                    <a href="/app.html" class="btn btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 8L16 12L10 16V8Z" fill="currentColor"/>
+                        </svg>
+                        Launch VR Experience
+                    </a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="card glass-card">
+                    <div class="card-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="code-block">
+                            <span class="comment">// AI Generation</span><br>
+                            <span class="keyword">const</span> structure = <span class="function">generate</span>(<span class="string">"Two towers with a bridge"</span>);<br>
+                            <br>
+                            <span class="comment">// Structural Analysis</span><br>
+                            <span class="keyword">await</span> agent.<span class="function">analyze</span>(structure);<br>
+                            <span class="output">> Stability: 98%<br>> Load Distribution: Optimal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-element cube-1"></div>
+                <div class="floating-element cube-2"></div>
+            </div>
+        </div>
+
+        <section id="features" class="features">
+            <div class="feature-card">
+                <div class="icon">🤖</div>
+                <h3>AI Generation</h3>
+                <p>Describe any structure in plain English and watch it appear instantly in 3D.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎮</div>
+                <h3>VR Interaction</h3>
+                <p>Grab, move, and stack objects with your hands using Meta Quest controllers.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Stress Testing</h3>
+                <p>Real-time color-coded visualization of structural integrity and load paths.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📁</div>
+                <h3>CAD Import</h3>
+                <p>Upload your own GLTF, OBJ, or STL models to test in the virtual world.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>Built for the Future of Engineering</h2>
+                <p class="about-text">
+                    VR Structural Playground combines cutting-edge WebXR technology with AI-powered design tools 
+                    to create an immersive engineering workspace. Whether you're a student learning structural 
+                    principles or a professional prototyping ideas, this platform makes complex engineering 
+                    concepts tangible and interactive.
+                </p>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <div class="tech-icon">⚡</div>
+                        <div class="tech-name">WebXR</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🎨</div>
+                        <div class="tech-name">Three.js</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">🤖</div>
+                        <div class="tech-name">Claude AI</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">📱</div>
+                        <div class="tech-name">Meta Quest</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mathematics" class="mathematics">
+            <div class="math-content">
+                <h2>Mathematical Framework</h2>
+                <p class="math-intro">
+                    Our FEA simulation uses rigorous engineering principles to calculate structural stress, 
+                    tension, and deformation. Here's the science behind the visualization.
+                </p>
+
+                <div class="math-grid">
+                    <!-- Stress Calculation -->
+                    <div class="math-card">
+                        <h3>📐 Stress Calculation</h3>
+                        <div class="formula-box">
+                            <div class="formula">σ = F / A</div>
+                            <div class="formula-label">Basic Stress Formula</div>
+                        </div>
+                        <p>
+                            <strong>σ</strong> = Stress (Pa)<br>
+                            <strong>F</strong> = Applied Force (N)<br>
+                            <strong>A</strong> = Cross-sectional Area (m²)
+                        </p>
+                        <div class="explanation">
+                            We calculate stress at each vertex by determining the effective force 
+                            based on distance from the force origin using inverse-square law attenuation.
+                        </div>
+                    </div>
+
+                    <!-- Von Mises Stress -->
+                    <div class="math-card">
+                        <h3>🎨 Von Mises Stress</h3>
+                        <div class="formula-box">
+                            <div class="formula">σ<sub>v</sub> = √(σ<sub>1</sub>² - σ<sub>1</sub>σ<sub>2</sub> + σ<sub>2</sub>²)</div>
+                            <div class="formula-label">Von Mises Criterion</div>
+                        </div>
+                        <p>
+                            Used to determine material failure by combining principal stresses 
+                            into a single scalar value for visualization.
+                        </p>
+                        <div class="color-mapping">
+                            <div class="color-bar"></div>
+                            <div class="color-labels">
+                                <span>0% (Green)</span>
+                                <span>50% (Yellow)</span>
+                                <span>100% (Red)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Force Distribution -->
+                    <div class="math-card">
+                        <h3>⚡ Force Distribution</h3>
+                        <div class="formula-box">
+                            <div class="formula">F<sub>eff</sub> = F<sub>0</sub> × |cos(θ)| / r²</div>
+                            <div class="formula-label">Distance & Direction Based</div>
+                        </div>
+                        <p>
+                            <strong>F<sub>0</sub></strong> = Initial force magnitude<br>
+                            <strong>θ</strong> = Angle between force and surface normal<br>
+                            <strong>r</strong> = Distance from force origin
+                        </p>
+                        <div class="explanation">
+                            Force decreases with distance squared, and alignment with force direction 
+                            affects the effective stress experienced by each component.
+                        </div>
+                    </div>
+
+                    <!-- Material Properties -->
+                    <div class="math-card">
+                        <h3>🔩 Material Properties</h3>
+                        <div class="formula-box">
+                            <div class="formula">E = σ / ε</div>
+                            <div class="formula-label">Young's Modulus</div>
+                        </div>
+                        <p>
+                            <strong>E</strong> = Young's Modulus (Pa)<br>
+                            <strong>ε</strong> = Strain (dimensionless)
+                        </p>
+                        <table class="material-table">
+                            <tr>
+                                <th>Material</th>
+                                <th>Density</th>
+                                <th>Max Stress</th>
+                            </tr>
+                            <tr>
+                                <td>Steel</td>
+                                <td>7850 kg/m³</td>
+                                <td>400 MPa</td>
+                            </tr>
+                            <tr>
+                                <td>Concrete</td>
+                                <td>2400 kg/m³</td>
+                                <td>30 MPa</td>
+                            </tr>
+                            <tr>
+                                <td>Wood</td>
+                                <td>600 kg/m³</td>
+                                <td>40 MPa</td>
+                            </tr>
+                            <tr>
+                                <td>Aluminum</td>
+                                <td>2700 kg/m³</td>
+                                <td>310 MPa</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Deformation -->
+                    <div class="math-card">
+                        <h3>📏 Deformation</h3>
+                        <div class="formula-box">
+                            <div class="formula">δ = (F × L) / (A × E)</div>
+                            <div class="formula-label">Linear Deformation</div>
+                        </div>
+                        <p>
+                            <strong>δ</strong> = Deformation (m)<br>
+                            <strong>L</strong> = Original length (m)<br>
+                            <strong>A</strong> = Cross-sectional area (m²)<br>
+                            <strong>E</strong> = Young's modulus (Pa)
+                        </p>
+                        <div class="explanation">
+                            Deformation is exaggerated (1x-20x) for visualization purposes. 
+                            The scaling allows users to see subtle stress distributions clearly.
+                        </div>
+                    </div>
+
+                    <!-- Failure Criteria -->
+                    <div class="math-card">
+                        <h3>⚠️ Failure Detection</h3>
+                        <div class="formula-box">
+                            <div class="formula">FOS = σ<sub>yield</sub> / σ<sub>applied</sub></div>
+                            <div class="formula-label">Factor of Safety</div>
+                        </div>
+                        <p>
+                            When <strong>FOS &lt; 1.0</strong>, material failure occurs.
+                        </p>
+                        <div class="failure-indicators">
+                            <div class="indicator safe">
+                                <span class="dot"></span>
+                                <span>Safe (FOS ≥ 1.0)</span>
+                            </div>
+                            <div class="indicator warning">
+                                <span class="dot"></span>
+                                <span>Warning (FOS = 0.7-1.0)</span>
+                            </div>
+                            <div class="indicator failure">
+                                <span class="dot"></span>
+                                <span>Failure (FOS < 0.7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computational Approach -->
+                <div class="computational-section">
+                    <h3>💻 Computational Approach</h3>
+                    <div class="approach-grid">
+                        <div class="approach-card">
+                            <h4>1. Mesh Discretization</h4>
+                            <p>Each object is represented as a mesh with vertices. Stress is calculated per-vertex for smooth gradients.</p>
+                        </div>
+                        <div class="approach-card">
+                            <h4>2. Force Field Application</h4>
+                            <p>User-placed force vectors create a field that affects all geometry based on distance and alignment.</p>
+                        </div>
+                        <div class="approach-card">
+                            <h4>3. Boundary Conditions</h4>
+                            <p>Fixed supports (FOS = ∞), pinned joints (rotation allowed), and free bodies are handled differently.</p>
+                        </div>
+                        <div class="approach-card">
+                            <h4>4. Real-time Visualization</h4>
+                            <p>Vertex shaders apply color mapping in GPU for 60fps performance in VR.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assumptions & Limitations -->
+                <div class="limitations-section">
+                    <h3>⚖️ Assumptions & Limitations</h3>
+                    <ul class="limitations-list">
+                        <li><strong>Linear Elasticity:</strong> Materials behave linearly (Hooke's Law applies)</li>
+                        <li><strong>Small Deformations:</strong> Deformations are small relative to dimensions</li>
+                        <li><strong>Isotropic Materials:</strong> Properties are uniform in all directions</li>
+                        <li><strong>Static Loading:</strong> No dynamic or impact forces considered</li>
+                        <li><strong>Simplified Geometry:</strong> Heuristic approach for real-time performance</li>
+                    </ul>
+                    <p class="accuracy-note">
+                        This system prioritizes <strong>real-time feedback</strong> and <strong>educational visualization</strong> 
+                        over numerical precision. For production engineering analysis, use dedicated FEA software like ANSYS or SolidWorks Simulation.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VR Structural Playground. Built for Hackathon.</p>
+    </footer>
+</body>
+</html>
